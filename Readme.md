@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Kirill Godelevich](https://up.htmlacademy.ru/htmlcss/24/user/900707).
-* Наставник: [Егор Глебов](https://htmlacademy.ru/profile/beast).
+* Наставник: [Мурат Баркинхоев](https://htmlacademy.ru/profile/id186857).
 
 ---
 
