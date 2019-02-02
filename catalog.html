@@ -24,7 +24,7 @@
 			</p>
 			<div class="header-contacts">
 				<p>+7 (812) 555-05-55</p>
-				<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. </p>
+				<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 			</div>
 			<a href="#">Равшан Джамшутович</a>
 			<ul class="user-navigation">
@@ -56,23 +56,56 @@
 				<h1>Перфораторы</h1>
 
 				<section class="filters">
-						<h2 class="visually-hidden">Фильтры товаров</h2>
+					<h2 class="visually-hidden">Фильтры товаров</h2>
+					<form class="filter" action="https://echo.htmlacademy.ru" method="get">
 						<p>Фильтр:</p>
-
+					
 						<div class="price-filter">
 							<h3>Цена:</h3>
 							<!-- Здесь будут формы -->
 						</div>
 
-						<div class="manufacturers-filter">
-							<h3>Производители:</h3>
-							<!-- Здесь будут формы -->
-						</div>
+						<fieldset class="manufacturers-filter">
+							<legend>Производители:</legend>
+							<ul>
+								<li class="filter-option">
+									<input class="visually-hidden fiter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
+									<label for="filter-bosch">Bosch</label>
+								</li>
+								<li class="filter-option">
+									<input class="visually-hidden fiter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
+									<label for="filter-interskol">Интерскол</label>
+								</li>
+								<li class="filter-option">
+									<input class="visually-hidden fiter-input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
+									<label for="filter-makita">Makita</label>
+								</li>
+								<li class="filter-option">
+									<input class="visually-hidden fiter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
+									<label for="filter-dewalt">Dewalt</label>
+								</li>
+								<li class="filter-option">
+									<input class="visually-hidden fiter-input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
+									<label for="filter-hitachi">Hitachi</label>
+								</li>
+							</ul>
+						</fieldset>
 
-						<div class="power-filter">
-							<h3>Питание:</h3>
-							<!-- Здесь будут формы -->
-						</div>
+						<fieldset class="power-filter">
+							<legend>Питание:</legend>
+							<ul>
+								<li class="filter-option">
+									<input class="visually-hidden filter-input-radio" type="radio" name="product-power" value="battery" id="filter-battery">
+									<label for="filter-battery">Аккумуляторные</label>
+								</li>
+								<li class="filter-option">
+									<input class="visually-hidden filter-input-radio" type="radio" name="product-power" value="elec" id="filter-elec">
+									<label for="filter-elec">Сетевые</label>
+								</li>
+							</ul>
+						</fieldset>
+						<button class="btn filter-button" type="submit">Показать</button>
+					</form>
 				</section>
 
 				<div class="sorting-and-catalog">
@@ -327,5 +360,14 @@
 				</p>
 			</div>
 		</footer>
+
+		<section class="modal modal-added">
+			<h2 class="visually-hidden">Товар добавлен</h2>
+			<!-- Значок -->
+			<p>Товар добавлен в корзину!</p>
+			<a class="btn" href="#">Оформить заказ</a>
+			<button class="btn button-continue" type="button">Продолжить покупки</button>
+			<button class="modal-close" type="button">Закрыть</button>
+		</section>
 	</body>
 </html>
