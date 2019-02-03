@@ -7,7 +7,7 @@
 	<body>
 		<header class="page-header">
 		<div class="header-top">
-			<a href="index.html" class="header-logo"><img src="img/svg/logo-technomart.svg" alt="Логотип магазина Техномарт"></a>
+			<a href="index.html" class="header-logo"><img src="img/svg/logo-technomart.svg" alt="Логотип магазина Техномарт" width="110" height="18"></a>
 
 			<form class="search-form"action="https://echo.htmlacademy.ru">
 				<label class="visually-hidden" for="user-search">Поиск</label>
@@ -63,10 +63,28 @@
 					<form class="filter" action="https://echo.htmlacademy.ru" method="get">
 						<p>Фильтр:</p>
 					
-						<div class="price-filter">
-							<h3>Цена:</h3>
-							<!-- Здесь будут формы -->
-						</div>
+						<fieldset class="price-filter">
+							<legend>Цена:</legend>
+							<div class="price-filter_range-dots">
+								<span class="range-dot-min">.</span>
+								<span class="range-dot-max">.</span>
+							</div>
+							<div class="range-dot-output">
+								<div class="range-output-min">
+									<label>
+										Минимальная цена
+										<input type="text" class="output-min-price" value="0">
+									</label>
+								</div>
+								<span class="output-spacing">-</span>
+								<div class="range-output-max">
+									<label>
+										Максимальная цена
+										<input type="text" class="output-max-price" value="30000">
+									</label>
+								</div>
+							</div> 
+						</fieldset>
 
 						<fieldset class="manufacturers-filter">
 							<legend>Производители:</legend>
@@ -114,7 +132,7 @@
 				<div class="sorting-and-catalog">
 					
 					<div class="sorting">
-						<p>Сортировка:</p>
+						<h3>Сортировка:</h3>
 						<a href="#">По цене</a>
 						<a href="#">По типу</a>
 						<a href="#">По функционалу</a>
@@ -322,7 +340,7 @@
 		</main>
 		<footer class="main-footer">
 			<div class="footer-top">
-				<a class="footer-logo"><img src="img/svg/logo-technomart.svg" alt="Логотип магазина Техномарт"></a>
+				<a class="footer-logo"><img src="img/svg/logo-technomart.svg" alt="Логотип магазина Техномарт" width="138" height="23"></a>
 				<p> 
 					г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
 					<a href="tel:+78125550555">+7 (812) 555-05-55</a>
