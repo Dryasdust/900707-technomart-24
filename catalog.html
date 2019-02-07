@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Техномарт: Каталог</title>
-		<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     	<link rel="stylesheet" href="css/normalize.css">
     	<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -75,17 +75,17 @@
 								<span class="range-dot-max">.</span>
 							</div>
 							<div class="range-dot-output">
-								<div class="range-output-min">
+								<div class="range-output range-output-min">
 									<label>
 										Минимальная цена
-										<input type="text" class="output-min-price" value="0">
+										<input type="text" class="output-min-price" name="min-price" value="0">
 									</label>
 								</div>
 								<span class="output-spacing">-</span>
-								<div class="range-output-max">
+								<div class="range-output range-output-max">
 									<label>
 										Максимальная цена
-										<input type="text" class="output-max-price" value="30000">
+										<input type="text" class="output-max-price" name="max-price" value="30000">
 									</label>
 								</div>
 							</div> 
@@ -138,10 +138,10 @@
 					
 					<div class="sorting">
 						<h3>Сортировка:</h3>
-						<a href="#">По цене</a>
+						<a class="sorting-active" href="#">По цене</a>
 						<a href="#">По типу</a>
 						<a href="#">По функционалу</a>
-						<a href="#" class="sorting-up">По возрастанию</a>	
+						<a href="#" class="sorting-up sorting-active">По возрастанию</a>	
 						<a href="#" class="sorting-down">По убыванию</a>	
 					</div>
 				

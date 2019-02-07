@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -59,37 +59,37 @@
 			<h2 class="visually-hidden">Наши предложения</h2>
 
 			<ul class="categories">
-				<li class="category new">
+				<li class="category materials new">
 					<h3>Материалы</h3>
-					<a href="#" class="btn">На любой вкус</a>
+					<a href="#" class="btn category-btn">На любой вкус</a>
 				</li>
-				<li class="category">
+				<li class="category tool">
 					<h3>Инструмент</h3>
-					<a href="#" class="btn">На все случаи</a>
+					<a href="#" class="btn category-btn">На все случаи</a>
 				</li>
-				<li class="category">
+				<li class="category equipment">
 					<h3>Техника</h3>
-					<a href="#" class="btn">Для стройки</a>
+					<a href="#" class="btn category-btn">Для стройки</a>
 				</li>
-				<li class="category">
+				<li class="category discounts">
 					<h3>Скидки</h3>
-					<a href="#" class="btn">На 350 товаров</a>
+					<a href="#" class="btn category-btn">На 350 товаров</a>
 				</li>
-				<li class="category">
+				<li class="category free-delivery">
 					<h3>Доставка</h3>
-					<a href="#" class="btn">Бесплатно</a>
+					<a href="#" class="btn category-btn">Бесплатно</a>
 				</li>
 			</ul>
 
 			<ul class="slider">
-				<li class="slider-item">
+				<li class="slider-item slider-drills">
 					<div class="slider-title">
 						<h3>Дрели</h3>
 						<p>Соседям на радость!</p>
 					</div>
 					<a href="catalog.html" class="btn">Открыть каталог</a>	
 				</li>
-				<li class="slider-item">
+				<li class="slider-item slider-perforators">
 					<div class="slider-title">
 						<h3>Перфораторы</h3>
 						<p>Настоящие мужские игрушки</p>
@@ -113,8 +113,10 @@
 
 		<section class="popular-goods">
 
-			<h2>Популярные товары:</h2>
-			<a href="#" class="btn">Все популярные товары</a>
+			<div class="popular-title popular-goods-title">
+				<h2>Популярные товары:</h2>
+				<a href="#" class="btn">Все популярные товары</a>
+			</div>
 
 			<ul class="popular-list">
 
@@ -198,8 +200,10 @@
 		
 		<section class="popular-manufacturers">
 
-			<h2>Популярные производители:</h2>
-			<a href="#" class="btn">Все производители</a>
+			<div class="popular-title popular-manufacturers-title">
+				<h2>Популярные производители:</h2>
+				<a href="#" class="btn">Все производители</a>
+			</div>
 
 			<ul class="popular-manufacturers-list">
 
@@ -263,18 +267,9 @@
 			</p>
 
 			<div class="services-change-buttons">
-				<label>
-					<input class="visually-hidden" type="radio" name="service-change">
-					Доставка
-				</label>
-				<label>
-					<input class="visually-hidden" type="radio" name="service-change">
-					Гарантия
-				</label>
-				<label>
-					<input class="visually-hidden" type="radio" name="service-change">
-					Кредит
-				</label>
+				<button class="service-btn service-btn-active" type="button">Доставка</button>
+				<button class="service-btn" type="button">Гарантия</button>
+				<button class="service-btn" type="button">Кредит</button>
 			</div>
 
 			<div class="delivery">
