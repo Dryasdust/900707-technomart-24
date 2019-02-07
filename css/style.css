@@ -367,6 +367,13 @@ a {
 	background-color: #ffffff;
 }
 
+.service-btn-active:hover,
+.service-btn-active:focus {
+	color: #ffffff;
+	
+	background-color: #293449;
+}
+
 .delivery {
 	background-image: url("../img/png/delivery.png");
 	background-repeat: no-repeat;
