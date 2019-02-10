@@ -9,20 +9,22 @@
   </head>
   <body>
 	<header class="page-header">
-		<div class="header-top">
-			<a class="logo header-logo"><img src="img/svg/logo-technomart.svg" alt="Логотип магазина Техномарт" width="110" height="18"></a>
-
-			<form class="search-form" action="https://echo.htmlacademy.ru">
-				<label class="visually-hidden" for="user-search">Поиск</label>
-				<input type="search" id="user-search" name="search" placeholder="Поиск:">
-			</form>
-
-			<a href="#">Закладки: 0</a>
-			<a href="#">Корзина: 0</a>
-			<a class="place-an-order" href="#">Оформить заказ</a>
+		<div class="header-top-wrapper">
+			<div class="header-top container">
+				<a class="logo header-logo"><img src="img/svg/logo-technomart.svg" alt="Логотип магазина Техномарт" width="110" height="18"></a>
+			
+				<form class="search-form" action="https://echo.htmlacademy.ru">
+					<label class="visually-hidden" for="user-search">Поиск</label>
+					<input type="search" id="user-search" name="search" placeholder="Поиск:">
+				</form>
+			
+				<a class="bookmarks" href="#">Закладки: 0</a>
+				<a class="basket" href="#">Корзина: 0</a>
+				<a class="place-an-order" href="#">Оформить заказ</a>
+			</div>
 		</div>
 
-		<div class="header-middle">
+		<div class="header-middle container">
 			<p class="header-description">
 				Интернет-магазин<br>
 				строительных материалов<br>
@@ -38,7 +40,7 @@
 			</ul>
 		</div>
 
-		<nav class="main-navigation">
+		<nav class="main-navigation container">
 			<ul class="site-navigation">
 				<li><a href="#" class="current-page">Главная</a></li>
 				<li><a href="#">Компания</a></li>
@@ -135,7 +137,7 @@
 						</div>
 						<p class="popular-item-price">
 							<span class="old-price">32500 Р.</span>
-							<span class="btn">25500 Р.</span>
+							<span class="btn price-btn">25500 Р.</span>
 						</p>
 					</li>
 
@@ -154,7 +156,7 @@
 						</div>
 						<p class="popular-item-price">
 							<span class="old-price">22500 Р.</span>
-							<span class="btn">15500 Р.</span>
+							<span class="btn price-btn">15500 Р.</span>
 						</p>
 					</li>
 
@@ -173,7 +175,7 @@
 						</div>
 						<p class="popular-item-price">
 							<span class="old-price">30500 Р.</span>
-							<span class="btn">25500 Р.</span>
+							<span class="btn price-btn">25500 Р.</span>
 						</p>
 					</li>
 
@@ -191,7 +193,7 @@
 							<img src="img/perf2000.jpg" alt="Популярный товар 4" width="218" height="170">
 						</div>
 						<p class="popular-item-price">
-							<span class="btn">12500 Р.</span>
+							<span class="btn price-btn">12500 Р.</span>
 						</p>
 					</li>
 
@@ -303,43 +305,47 @@
 
 		</section>
 
-    	<section class="about-us">
-    		<h2>Компания «Техномарт»</h2>
-    		<p>
-    			Настоящий мужской шоппинг начинается здесь! 
-	    		Огромный выбор товаров для ремонта и строительства 
-	    		не оставит равнодушными любителей сэкономить на гастарбайтерах.
-    		</p>
-    		<p>
-    			Мы можем доставить ваш товар в самые отдаленные точки России<br>
-				Техномарт работает со многими транспортными компаниями:
-			</p>
-			<ul>
-				<li>Деловые линии</li>
-				<li>Автотрейдинг</li>
-				<li>ЖелДорЭкспедиция</li>
-			</ul>
-			<a href="#" class="btn">Подробнее о компании</a>
-    	</section>
-
-		<section class="contacts">
-			<h2>Контакты</h2>
-			<p>
-				Вы можете забрать товар сами,<br> 
-				заехав в наш офис:
-			</p>
-			<a href="#" class="map"><img src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="300" height="158"></a>
-			<a href="#" class="btn">Заблудились? Напишите нам!</a>
-		</section>
+    	<div class="columns container">
+    		<section class="about-us">
+    			<h2>Компания «Техномарт»</h2>
+    			<p>
+    				Настоящий мужской шоппинг начинается здесь! 
+    			    		Огромный выбор товаров для ремонта и строительства 
+    			    		не оставит равнодушными любителей сэкономить на гастарбайтерах.
+    			</p>
+    			<p>
+    				Мы можем доставить ваш товар в самые отдаленные точки России<br>
+    						Техномарт работает со многими транспортными компаниями:
+    					</p>
+    					<ul>
+    						<li>Деловые линии</li>
+    						<li>Автотрейдинг</li>
+    						<li>ЖелДорЭкспедиция</li>
+    					</ul>
+    					<a href="#" class="btn">Подробнее о компании</a>
+    		</section>
+    		
+    				<section class="contacts">
+    					<h2>Контакты</h2>
+    					<p>
+    						Вы можете забрать товар сами,<br> 
+    						заехав в наш офис:
+    					</p>
+    					<a href="#" class="map"><img src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="300" height="158"></a>
+    					<a href="#" class="btn">Заблудились? Напишите нам!</a>
+    				</section>
+    	</div>
     </main>
 	
 	<footer class="main-footer">
-		<div class="footer-top">
-			<a class="logo footer-logo"><img src="img/svg/logo-technomart.svg" alt="Логотип магазина Техномарт" width="138" height="23"></a>
-			<p> 
-				г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-				<a href="tel:+78125550555">+7 (812) 555-05-55</a>
-			</p>
+		<div class="footer-top container">
+			<div class="footer-top-contacts">
+				<a class="logo footer-logo"><img src="img/svg/logo-technomart.svg" alt="Логотип магазина Техномарт" width="138" height="23"></a>
+				<p> 
+					г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+					<a href="tel:+78125550555">+7 (812) 555-05-55</a>
+				</p>
+			</div>
 			<nav class="footer-navigation">
 				<ul class="nav-top">
 					<li><a href="#">Компания</a></li>
@@ -357,23 +363,25 @@
 			</nav>
 		</div>
 		<div class="footer-bottom">
-			<p class="copyright">
-				© 2010–2019 Компания «Техномарт» <br>
-				Все права защищены
-			</p>
-			<ul class="social">
-				<li><a href="https://vk.com">Вконтакте</a></li>
-				<li><a href="https://www.facebook.com">Фейсбук</a></li>
-				<li><a href="https://www.instagram.com">Инстаграм</a></li>
-			</ul>
-			<p class="feedback">
-				Обратная связь: <br>
-				<a href="#">mail@htmlacademy.ru</a>
-			</p>
-			<p class="developed">
-				Разработано: <br>
-				<a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-			</p>
+			<div class="container">
+				<p class="copyright">
+					© 2010–2019 Компания «Техномарт» <br>
+					Все права защищены
+				</p>
+				<ul class="social">
+					<li><a href="https://vk.com">Вконтакте</a></li>
+					<li><a href="https://www.facebook.com">Фейсбук</a></li>
+					<li><a href="https://www.instagram.com">Инстаграм</a></li>
+				</ul>
+				<p class="feedback">
+					Обратная связь: <br>
+					<a href="#">mail@htmlacademy.ru</a>
+				</p>
+				<p class="developed">
+					Разработано: <br>
+					<a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+				</p>
+			</div>
 		</div>
 	</footer>
 
