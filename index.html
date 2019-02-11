@@ -56,7 +56,7 @@
 
 		<h1 class="visually-hidden">Интернет-магазин строительных материалов</h1>
 		
-		<section class="suggestions">
+		<section class="suggestions container">
 
 			<h2 class="visually-hidden">Наши предложения</h2>
 
@@ -73,47 +73,53 @@
 					<h3>Техника</h3>
 					<a href="#" class="btn category-btn">Для стройки</a>
 				</li>
-				<li class="category discounts">
-					<h3>Скидки</h3>
-					<a href="#" class="btn category-btn">На 350 товаров</a>
-				</li>
-				<li class="category free-delivery">
-					<h3>Доставка</h3>
-					<a href="#" class="btn category-btn">Бесплатно</a>
-				</li>
 			</ul>
 
-			<ul class="slider">
-				<li class="slider-item slider-drills">
-					<div class="slider-title">
-						<h3>Дрели</h3>
-						<p>Соседям на радость!</p>
+			<div class="slider-and-advantages">
+				<div class="slider">
+					<div class="slider-item slider-drills">
+						<div class="slider-title">
+							<h3>Дрели</h3>
+							<p>Соседям на радость!</p>
+						</div>
+							<a href="catalog.html" class="btn">Открыть каталог</a>	
 					</div>
-					<a href="catalog.html" class="btn">Открыть каталог</a>	
-				</li>
-				<li class="slider-item slider-perforators">
-					<div class="slider-title">
-						<h3>Перфораторы</h3>
-						<p>Настоящие мужские игрушки</p>
+					<div class="slider-item slider-perforators">
+						<div class="slider-title">
+							<h3>Перфораторы</h3>
+							<p>Настоящие мужские игрушки</p>
+						</div>
+						<a href="catalog.html" class="btn">Открыть каталог</a>
 					</div>
-					<a href="catalog.html" class="btn">Открыть каталог</a>
-				</li>
-			</ul>
-			<div class="slider-change-buttons">
-				<label>
-					<input class="slider-button" type="radio" name="slider-change">
-					<span class="visually-hidden">Первый слайд</span>
-				</label>
-				<label>
-					<input class="slider-button" type="radio" name="slider-change">
-					<span class="visually-hidden">Второй слайд</span>
-				</label>
-			</div>	
-			<button class="slider-back" type="button">Пролистать назад</button>
-			<button class="slider-next" type="button">Пролистать вперёд</button>
+					
+					<div class="slider-change-buttons">
+						<label>
+							<input class="slider-button" type="radio" name="slider-change">
+							<span class="visually-hidden">Первый слайд</span>
+						</label>
+						<label>
+							<input class="slider-button" type="radio" name="slider-change">
+							<span class="visually-hidden">Второй слайд</span>
+						</label>
+					</div>	
+					<button class="slider-back" type="button">Пролистать назад</button>
+					<button class="slider-next" type="button">Пролистать вперёд</button>
+				</div>
+				
+				<ul class="advantages">
+					<li class="category discounts">
+						<h3>Скидки</h3>
+						<a href="#" class="btn category-btn">На 350 товаров</a>
+					</li>
+					<li class="category free-delivery">
+						<h3>Доставка</h3>
+						<a href="#" class="btn category-btn">Бесплатно</a>
+					</li>
+				</ul>
+			</div>
 		</section>
 
-		<section class="popular-goods">
+		<section class="popular-goods container">
 
 			<div class="popular-title popular-goods-title">
 				<h2>Популярные товары:</h2>
@@ -200,7 +206,7 @@
 			</ul>
 		</section>
 		
-		<section class="popular-manufacturers">
+		<section class="popular-manufacturers container">
 
 			<div class="popular-title popular-manufacturers-title">
 				<h2>Популярные производители:</h2>
@@ -262,45 +268,51 @@
 		
 		<section class="services">
 			
-			<h2>Сервисы</h2>
-			<p>
-				Хороший интернет-магазин отличается от плохого не только ценами! <br>
-				Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-			</p>
-
-			<div class="services-change-buttons">
-				<button class="service-btn service-btn-active" type="button">Доставка</button>
-				<button class="service-btn" type="button">Гарантия</button>
-				<button class="service-btn" type="button">Кредит</button>
-			</div>
-
-			<div class="delivery">
-				<h3>Доставка</h3>
+			<div class="services-wrapper container">
+				<h2>Сервисы</h2>
 				<p>
-					Мы с удовольствием доставим ваш товар прямо 
-					к вашему подъезду совершенно бесплатно!
-					Ведь мы неплохо заработаем, 
-					поднимая его на ваш этаж!
+					Хороший интернет-магазин отличается от плохого не только ценами! <br>
+					Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
 				</p>
-			</div>
-			
-			<div class="warranty">
-				<h3>Гарантия</h3>
-				<p>
-					Если купленный у нас товар поломается или заискрит, 
-					а также в случае пожара, спровоцированного его возгаранием,  
-					вы всегда можете быть уверены в нашей гарантии. 
-					Мы обменяем сгоревший товар на новый. 
-					Дом уж восстановите как-нибудь сами.
-				</p>
-			</div>
-
-			<div class="credit">
-				<h3>Кредит</h3>
-				<p>
-					Залезть в долговую яму стало проще! 
-					Кредитные консультанты придут вам на помощь.
-				</p>
+				
+				<div class="service-change">
+					<div class="services-change-buttons">
+						<button class="service-btn service-btn-active" type="button">Доставка</button>
+						<button class="service-btn" type="button">Гарантия</button>
+						<button class="service-btn" type="button">Кредит</button>
+					</div>
+					
+					<div class="service-change-description">
+						<div class="delivery">
+							<h3>Доставка</h3>
+							<p>
+								Мы с удовольствием доставим ваш товар прямо 
+								к вашему подъезду совершенно бесплатно!
+								Ведь мы неплохо заработаем, 
+								поднимая его на ваш этаж!
+							</p>
+						</div>
+						
+						<div class="warranty">
+							<h3>Гарантия</h3>
+							<p>
+								Если купленный у нас товар поломается или заискрит, 
+								а также в случае пожара, спровоцированного его возгаранием,  
+								вы всегда можете быть уверены в нашей гарантии. 
+								Мы обменяем сгоревший товар на новый. 
+								Дом уж восстановите как-нибудь сами.
+							</p>
+						</div>
+						
+						<div class="credit">
+							<h3>Кредит</h3>
+							<p>
+								Залезть в долговую яму стало проще! 
+								Кредитные консультанты придут вам на помощь.
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</section>
