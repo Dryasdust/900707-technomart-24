@@ -104,7 +104,7 @@ input[type="radio"].visually-hidden {
 	color: #ffffff;
 }
 
-.header-top a:active {
+.header-top a:active:not(.logo) {
 	opacity: 0.6;
 }
 
@@ -1145,7 +1145,8 @@ fieldset.power-filter {
 	opacity: 0.6;
 }
 
-.filter-input-checkbox + label:hover::before {
+.filter-input-checkbox:not([disabled]) + label:hover::before,
+.filter-input-checkbox:not([disabled]):focus + label::before  {
 	opacity: 1;
 }
 
@@ -1181,7 +1182,8 @@ fieldset.power-filter {
 	opacity: 0.6;
 }
 
-.filter-input-radio + label:hover::before {
+.filter-input-radio:not([disabled]) + label:hover::before,
+.filter-input-radio:not([disabled]):focus + label::before {
 	opacity: 1;
 }
 
@@ -1562,15 +1564,15 @@ a.sorting-down:focus {
 	display: flex;
 }
 
-.main-footer a:hover,
-.main-footer a:focus {
+.footer-navigation a:hover, 
+.footer-navigation a:focus {
 	text-decoration: underline;
 }
 
-.main-footer a:active {
+.footer-navigation a:active {
 	text-decoration: none;
 	opacity: 0.5;
-} 
+}
 
 .footer-top {
 	margin-bottom: 50px;
