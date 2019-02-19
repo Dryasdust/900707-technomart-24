@@ -151,15 +151,16 @@ input[type="radio"].visually-hidden {
 }
 
 .user-search {
+	box-sizing: border-box;
 	font-family: Cuprum, sans-serif;
-	width: 100%;
+	width: 270px;
 	min-height: 42px;
 
 	padding-top: 12px;
 	padding-bottom: 12px;
 	padding-left: 49px;
 
-	color: #000000;
+	color: #ffffff;
 	font-size: 17px;
 	line-height: 18px;
 
@@ -179,14 +180,16 @@ input[type="radio"].visually-hidden {
 	background-image: url("../img/svg/icon-search-1.svg");
 }
 
-.user-search::placeholder {
+/*.user-search::placeholder {
 	font: inherit;
 	color: #ffffff;
-}
+}*/
 
 .search-form input:focus {
 	outline: none;
 	background-color: #ffffff;
+
+	color: #000000;
 }
 
 .bookmarks,
@@ -695,11 +698,11 @@ input[type="radio"].visually-hidden {
 .slider-item {
 	display: flex;
 	flex-direction: column;
-	min-height: 266px;
+	height: 266px;
 }
 
 .slider-item .btn {
-	margin-top: auto;
+	margin-top: 120px;
 	margin-bottom: 22px;
 	margin-left: 25px;
 
@@ -725,10 +728,13 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-title p {
-	margin: 0;
-	padding: 0;
+	font-family: Cuprum, sans-serif;
 	color: #ffffff;
 	font-size: 18px;
+
+	margin: 0;
+	padding: 0;
+	
 }
 
 .slider-back {
@@ -793,15 +799,15 @@ input[type="radio"].visually-hidden {
 
 .popular-title .btn {
 	width: 253px;
-	margin-top: auto;
-	margin-bottom: auto;
+	margin-top: 25px;
+	margin-bottom: 26px;
 	margin-left: auto;
 	margin-right: 25px;
 }
 
 .popular-title h2 {
 	margin: 0;
-	margin-top: 30px;
+	margin-top: 28px;
 	margin-bottom: 30px;
 	margin-left: 30px;
 
@@ -839,8 +845,10 @@ input[type="radio"].visually-hidden {
 
 .manufacturer {
 	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 	width: 218px;
-	min-height: 142px;
+	height: 142px;
 	margin-right: 20px;
 	margin-bottom: 20px;
 
@@ -848,9 +856,9 @@ input[type="radio"].visually-hidden {
 	border: 1px solid #e5e5e5;
 }
 
-.manufacturer a {
+/*.manufacturer a {
 	margin: auto;
-}
+}*/
 
 .manufacturer:nth-child(4n) {
 	margin-right: 0;
@@ -867,7 +875,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services {
-	margin-bottom: 80px;
+	margin-bottom: 75px;
 	padding-top: 65px;
 	padding-bottom: 5px; 
 
@@ -986,6 +994,7 @@ input[type="radio"].visually-hidden {
 }
 
 .service h3 {
+	margin-top: 5px;
 	margin-bottom: 28px;
 }
 
@@ -1015,7 +1024,7 @@ input[type="radio"].visually-hidden {
 
 .columns.container {
 	display: flex;
-	margin-bottom: 88px;
+	margin-bottom: 85px;
 }
 
 .about-us {
@@ -1072,7 +1081,7 @@ input[type="radio"].visually-hidden {
 
 .about-us p {
 	margin: 0;
-	margin-bottom: 22px;
+	margin-bottom: 25px;
 	padding: 0;
 }
 
@@ -1168,7 +1177,7 @@ input[type="radio"].visually-hidden {
 }
 
 .perforators {
-	margin-bottom: 35px;
+	margin-bottom: 25px;
 }
 
 .perforators h1 {
@@ -1466,6 +1475,7 @@ fieldset.power-filter {
 	position: absolute;
 	
 	left: 50%;
+	top: 0;
 
 	display: none;
 	flex-direction: column;
@@ -1605,7 +1615,7 @@ fieldset.power-filter {
 
 	margin: 0 auto;
 	/*margin-top: 11px;*/
-	margin-bottom: 12px;
+	margin-bottom: 15px;
 	padding: 0;
 }
 
@@ -1800,7 +1810,7 @@ a.sorting-active {
 
 	background-color: #ffffff;
 	border: 1px solid #e5e5e5;
-	border-radius: 2px; 
+	border-radius: 5px; 
 }
 
 .pagination-next {
@@ -1829,7 +1839,7 @@ a.sorting-active {
 .about-perforators {
 	background-color: #f2f6f8;
 
-	padding-top: 38px;
+	padding-top: 40px;
 	padding-bottom: 70px;
 }
 
@@ -2074,11 +2084,16 @@ a.sorting-active {
 }
 
 .modal-write-us {
-	position: relative;
+	display: none;
+	position: fixed;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
 	width: 620px;
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
 	border-top: 7px solid #ee3643;
-	margin: 10px auto;
+	margin-left: -310px;
+	margin-top: -237px;
 
 	background-color: #f4f4f4;
 }
@@ -2179,12 +2194,16 @@ a.sorting-active {
 }
 
 .modal-map {
-	position: relative;
+	display: none;
+	position: fixed;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
 	width: 940px;
 	height: 446px;
-	margin: 0 auto;
-
-	margin-top: 20px;
+	
+	margin-left: -470px;
+	margin-top: -223px;
 
 	background-color: #565656;
 	box-shadow: 0 0 15px 1px rgba(47, 42, 43, 0.5); 
@@ -2206,10 +2225,15 @@ a.sorting-active {
 	border: none;
 }
 .modal-added {
-	position: relative;
+	display: none;
+	position: fixed;
+	z-index: 2;
 	width: 620px;
+	top: 50%;
+	left: 50%;
 
-	margin: 20px auto;
+	margin-top: -143px;
+	margin-left: -310px;
 
 	background-color: #f1f1f1;
 
