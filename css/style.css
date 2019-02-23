@@ -436,14 +436,19 @@ input[type="radio"].visually-hidden {
 
 .user-name {
 	position: relative;
-	display: block;
-	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	width: 300px;
 
-	padding: 13px 0;
+	cursor: pointer;
+}
+
+.user-profile {
+	width: 260px;
 	padding-left: 48px;
 }
 
-.user-name::before {
+.user-profile::before {
 	content: "";
 
 	position: absolute;
@@ -457,36 +462,31 @@ input[type="radio"].visually-hidden {
 	background-position: center;
 }
 
-.user-name::after {
-	content: "";
+.user-logout {
+	display: block;
+	width: 60px;
 
-	position: absolute;
-	top: 14px;
-	right: 10px;
-
-	width: 20px;
-	height: 17px;
-	background-image: url("../img/svg/icon-login.svg");
+	background-image: url("../img/svg/icon-logout.svg");
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: 25px 14px;
 }
 
-.user-name:hover::before,
-.user-name:focus::before {
+.user-name:hover .user-profile::before,
+.user-profile:focus::before {
 	background-image: url("../img/svg/icon-user-1.svg");
 }
 
-.user-name:hover::after,
-.user-name:focus::after {
-	background-image: url("../img/svg/icon-login-1.svg");
+.user-name:hover .user-logout,
+.user-logout:focus {
+	background-image: url("../img/svg/icon-logout-1.svg");
 }
 
-.user-name:active::before {
+.user-name:active .user-profile::before {
 	background-image: url("../img/svg/icon-user.svg");
 }
 
-.user-name:active::after {
-	background-image: url("../img/svg/icon-login.svg");
+.user-name:active .user-logout {
+	background-image: url("../img/svg/icon-logout.svg");
 }
 
 .user-name:active span {
@@ -1586,8 +1586,10 @@ fieldset.power-filter {
 
 	box-shadow: inset 0 -3px 0 #367315;
 	border-radius: 2px;
+	border: none;
 
 	font-family: "Cuprum", "Arial", sans-serif;
+	color: #ffffff;
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -1641,6 +1643,8 @@ fieldset.power-filter {
 	line-height: 18px;
 	text-transform: uppercase;
 	text-align: center;
+
+	background-color: #ffffff;
 }
 
 .to-bookmarks:hover,
@@ -1729,6 +1733,10 @@ fieldset.power-filter {
 	line-height: 20px;
 	font-weight: 700;
 	text-align: center;
+}
+
+.product-model {
+	text-transform: uppercase;
 }
 
 .old-price {
@@ -2161,10 +2169,46 @@ a.sorting-active {
 	text-decoration: none;
 }
 
+@keyframes show {
+	0% {
+		transform: scale(0);
+	}
+
+	50% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-write-us {
 	display: none;
 	position: fixed;
-	z-index: 2;
+	z-index: 5;
 	top: 50%;
 	left: 50%;
 	width: 620px;
@@ -2298,7 +2342,7 @@ a.sorting-active {
 .modal-added {
 	display: none;
 	position: fixed;
-	z-index: 2;
+	z-index: 5;
 	width: 620px;
 	top: 50%;
 	left: 50%;
@@ -2365,4 +2409,29 @@ a.sorting-active {
 .button-continue:focus {
 	background-color: #ffffff;
 	opacity: 0.5;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-show {
+	display: block;
+	animation: show 0.6s;
+}
+
+.modal-error {
+	animation: shake 0.6s;
+}
+
+.overlay-show {
+	display: block;
 }

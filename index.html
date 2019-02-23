@@ -131,7 +131,7 @@
 					<li class="catalog-item popular-item">
 						<h3>
 							<a class="product-name" href="#">
-								Перфоратор BOSCH BFG 9000
+								Перфоратор <span class="product-model">Bosch bfg 9000</span>
 							</a>
 						</h3>
 
@@ -143,15 +143,15 @@
 							<span class="btn price-btn">25500 Р.</span>
 						</p>
 						<div class="hover-actions">
-							<a href="#" class="buy">Купить</a>
-							<a href="#" class="to-bookmarks">В закладки</a>
+							<button class="buy">Купить</button>
+							<button class="to-bookmarks">В закладки</button>
 						</div>
 					</li>
 
 					<li class="catalog-item popular-item">
 						<h3>
 							<a class="product-name" href="#">
-								Перфоратор BOSCH BFG 3000
+								Перфоратор <span class="product-model">Bosch bfg 3000</span>
 							</a>
 						</h3>
 
@@ -163,15 +163,15 @@
 							<span class="btn price-btn">15500 Р.</span>
 						</p>
 						<div class="hover-actions">
-							<a href="#" class="buy">Купить</a>
-							<a href="#" class="to-bookmarks">В закладки</a>
+							<button class="buy">Купить</button>
+							<button class="to-bookmarks">В закладки</button>
 						</div>
 					</li>
 
 					<li class="catalog-item popular-item">
 						<h3>
 							<a class="product-name" href="#">
-								Перфоратор BOSCH BFG 6000
+								Перфоратор <span class="product-model">Bosch bfg 6000</span>
 							</a>
 						</h3>
 
@@ -183,8 +183,8 @@
 							<span class="btn price-btn">25500 Р.</span>
 						</p>
 						<div class="hover-actions">
-							<a href="#" class="buy">Купить</a>
-							<a href="#" class="to-bookmarks">В закладки</a>
+							<button class="buy">Купить</button>
+							<button class="to-bookmarks">В закладки</button>
 						</div>
 					</li>
 
@@ -192,7 +192,7 @@
 						<div class="new"><span class="visually-hidden">Новинка</span></div>
 						<h3>
 							<a class="product-name" href="#">
-								Перфоратор BOSCH BFG 2000
+								Перфоратор <span class="product-model">Bosch bfg 2000</span>
 							</a>
 						</h3>
 
@@ -203,8 +203,8 @@
 							<span class="btn price-btn">12500 Р.</span>
 						</p>
 						<div class="hover-actions">
-							<a href="#" class="buy">Купить</a>
-							<a href="#" class="to-bookmarks">В закладки</a>
+							<button class="buy">Купить</button>
+							<button class="to-bookmarks">В закладки</button>
 						</div>
 					</li>
 
@@ -349,7 +349,7 @@
 						заехав в наш офис:
 					</p>
 					<a href="#" class="map"><img src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="300" height="158"></a>
-					<a href="#" class="btn">Заблудились? Напишите нам!</a>
+					<a href="#" class="btn write-us-btn">Заблудились? Напишите нам!</a>
 				</section>
 			</div>
 		</main>
@@ -426,10 +426,24 @@
 			<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
 		</section>
 
+		<section class="modal modal-added">
+			<div class="added-bg">
+				<h2 class="visually-hidden">Товар добавлен</h2>
+				<p class="item-added">Товар добавлен в корзину!</p>
+			</div>
+			<div class="added-btns">			
+				<a class="btn order-btn" href="#">Оформить заказ</a>			
+				<button class="btn button-continue" type="button">Продолжить покупки</button>
+			</div>
+			<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+		</section>
+
 		<section class="modal modal-map">
 			<h2 class="visually-hidden">Карта</h2>
 			<img src="img/map-full.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="940" height="446">
 			<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
 		</section>
+		<div class="overlay"></div>
+		<script src="js/script.js"></script>
 	</body>
 </html>
