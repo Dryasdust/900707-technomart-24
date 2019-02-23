@@ -33,8 +33,20 @@ if (writePopup) {
 		if (!yourName.value || !yourEmail.value) {
 			evt.preventDefault();
 			writePopup.classList.remove("modal-error");
-      		writePopup.offsetWidth = writePopup.offsetWidth;
+			writePopup.offsetWidth = writePopup.offsetWidth;
 			writePopup.classList.add("modal-error");
+		}
+	});
+
+	window.addEventListener ("keydown", function(evt) {
+		if(evt.keyCode === 27) {
+			evt.preventDefault();
+			if(addedPopup.classList.contains("modal-show") || writePopup.classList.contains("modal-show")) {
+				writePopup.classList.remove("modal-show");
+				addedPopup.classList.remove("modal-show");
+				writePopup.classList.remove("modal-error");
+				overlay.classList.remove("overlay-show");
+			}	
 		}
 	});
 }
@@ -62,10 +74,8 @@ continueShoping.addEventListener ("click", function(evt) {
 window.addEventListener ("keydown", function(evt) {
 	if(evt.keyCode === 27) {
 		evt.preventDefault();
-		if(writePopup.classList.contains("modal-show") || addedPopup.classList.contains("modal-show")) {
-			writePopup.classList.remove("modal-show");
+		if(addedPopup.classList.contains("modal-show")) {
 			addedPopup.classList.remove("modal-show");
-			writePopup.classList.remove("modal-error");
 			overlay.classList.remove("overlay-show");
 		}	
 	}
