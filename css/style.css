@@ -1095,6 +1095,14 @@ input[type="radio"].visually-hidden {
 	background-position: 100%, 50%;
 }
 
+.credit p {
+	margin-bottom: 31px;
+}
+
+.credit-request {
+	width: 195px;
+}
+
 .columns.container {
 	display: flex;
 	margin-bottom: 83px;
