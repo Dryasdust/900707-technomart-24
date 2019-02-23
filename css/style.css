@@ -1058,9 +1058,7 @@ input[type="radio"].visually-hidden {
 
 .service-btn-active:hover,
 .service-btn-active:focus {
-	color: #ffffff;
-
-	background-color: #293449;
+	background-color: #ffffff;
 }
 
 .service {
@@ -1077,6 +1075,7 @@ input[type="radio"].visually-hidden {
 }
 
 .delivery {
+	display: none;
 	background-image: url("../img/png/delivery.png");
 	background-repeat: no-repeat;
 	background-position: 100% 100%;
@@ -2436,6 +2435,6 @@ a.sorting-active {
 	animation: shake 0.6s;
 }
 
-.overlay-show {
+.show {
 	display: block;
 }

@@ -1,6 +1,7 @@
 var writePopup = document.querySelector(".modal-write-us");
 var addedPopup = document.querySelector(".modal-added");
 var overlay = document.querySelector(".overlay");
+var services = document.querySelector(".services");
 
 var buy = document.querySelectorAll(".buy");
 var addedClose = addedPopup.querySelector(".modal-close");
@@ -18,7 +19,7 @@ if (writePopup) {
 	writeBtn.addEventListener ("click", function(evt) {
 		evt.preventDefault();
 		writePopup.classList.add("modal-show");
-		overlay.classList.add("overlay-show");
+		overlay.classList.add("show");
 		yourName.focus();
 	});
 
@@ -26,7 +27,7 @@ if (writePopup) {
 		evt.preventDefault();
 		writePopup.classList.remove("modal-show");
 		writePopup.classList.remove("modal-error");
-		overlay.classList.remove("overlay-show");
+		overlay.classList.remove("show");
 	});
 
 	writeForm.addEventListener ("submit", function(evt) {
@@ -45,30 +46,83 @@ if (writePopup) {
 				writePopup.classList.remove("modal-show");
 				addedPopup.classList.remove("modal-show");
 				writePopup.classList.remove("modal-error");
-				overlay.classList.remove("overlay-show");
+				overlay.classList.remove("show");
 			}	
 		}
 	});
+}
+
+if (services) {
+	var deliveryBtn = services.querySelector(".delivery-btn");
+	var warrantyBtn = services.querySelector(".warranty-btn");
+	var creditBtn = services.querySelector(".credit-btn");
+
+	var delivery = document.querySelector(".delivery");
+	var warranty = document.querySelector(".warranty");
+	var credit = document.querySelector(".credit");
+
+	deliveryBtn.addEventListener ("click", function(evt) {
+		evt.preventDefault();
+		warrantyBtn.classList.remove("service-btn-active");
+		creditBtn.classList.remove("service-btn-active");
+		warranty.classList.remove("show");
+		credit.classList.remove("show");
+		deliveryBtn.classList.add("service-btn-active");
+		delivery.classList.add("show");
+		
+	});
+
+	warrantyBtn.addEventListener ("click", function(evt) {
+		evt.preventDefault();
+		deliveryBtn.classList.remove("service-btn-active");
+		creditBtn.classList.remove("service-btn-active");
+		delivery.classList.remove("show");
+		credit.classList.remove("show");
+		warrantyBtn.classList.add("service-btn-active");
+		warranty.classList.add("show");
+	});
+
+	creditBtn.addEventListener ("click", function(evt) {
+		evt.preventDefault();
+		deliveryBtn.classList.remove("service-btn-active");
+		warrantyBtn.classList.remove("service-btn-active");
+		warranty.classList.remove("show");
+		delivery.classList.remove("show");
+		creditBtn.classList.add("service-btn-active");
+		credit.classList.add("show");
+	});
+
+	if (deliveryBtn.classList.contains("service-btn-active")) {
+		delivery.classList.add("show");
+	}
+
+	if (warrantyBtn.classList.contains("service-btn-active")) {
+		warranty.classList.add("show");
+	}
+
+	if (creditBtn.classList.contains("service-btn-active")) {
+		credit.classList.add("show");
+	}
 }
 
 for (i = 0; i < buy.length; i++)
 	buy[i].addEventListener ("click", function(evt) {
 		evt.preventDefault();
 		addedPopup.classList.add("modal-show");
-		overlay.classList.add("overlay-show");
+		overlay.classList.add("show");
 		toOrder.focus();
 	});
 
 addedClose.addEventListener ("click", function(evt) {
 	evt.preventDefault();
 	addedPopup.classList.remove("modal-show");
-	overlay.classList.remove("overlay-show");
+	overlay.classList.remove("show");
 });
 
 continueShoping.addEventListener ("click", function(evt) {
 	evt.preventDefault();
 	addedPopup.classList.remove("modal-show");
-	overlay.classList.remove("overlay-show");
+	overlay.classList.remove("show");
 });
 
 window.addEventListener ("keydown", function(evt) {
@@ -76,7 +130,7 @@ window.addEventListener ("keydown", function(evt) {
 		evt.preventDefault();
 		if(addedPopup.classList.contains("modal-show")) {
 			addedPopup.classList.remove("modal-show");
-			overlay.classList.remove("overlay-show");
+			overlay.classList.remove("show");
 		}	
 	}
 });
