@@ -799,6 +799,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-back {
+	display: block;
 	position: absolute;
 	z-index: 1;
 	left: 25px;
@@ -820,6 +821,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-next {
+	display: block;
 	position: absolute;
 	z-index: 1;
 	right: 22px;
