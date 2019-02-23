@@ -2,12 +2,39 @@ var writePopup = document.querySelector(".modal-write-us");
 var addedPopup = document.querySelector(".modal-added");
 var overlay = document.querySelector(".overlay");
 var services = document.querySelector(".services");
+var map = document.querySelector(".modal-map");
 
 var buy = document.querySelectorAll(".buy");
 var addedClose = addedPopup.querySelector(".modal-close");
 var continueShoping = addedPopup.querySelector(".button-continue");
 var toOrder = addedPopup.querySelector(".order-btn");
 
+if (map) {
+	var mapBtn = document.querySelector(".map");
+	var mapClose = map.querySelector(".modal-close");
+
+	mapBtn.addEventListener ("click", function(evt) {
+		evt.preventDefault();
+		map.classList.add("modal-show");
+		overlay.classList.add("show");
+	});
+
+	mapClose.addEventListener ("click", function(evt) {
+		evt.preventDefault();
+		map.classList.remove("modal-show");
+		overlay.classList.remove("show");
+	});
+
+	window.addEventListener ("keydown", function(evt) {
+		if(evt.keyCode === 27) {
+			evt.preventDefault();
+			if(map.classList.contains("modal-show")) {
+				map.classList.remove("modal-show");				
+				overlay.classList.remove("show");
+			}	
+		}
+	});
+}
 
 if (writePopup) {
 	var writeBtn = document.querySelector(".write-us-btn");
