@@ -844,6 +844,7 @@ input[type="radio"].visually-hidden {
 
 .slider-drills {
 	display: none;
+	background-color: #34211d;
 	background-image: url("../img/slider2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover; 
@@ -851,6 +852,7 @@ input[type="radio"].visually-hidden {
 
 .slider-perforators {
 	display: none;
+	background-color: #625142;
 	background-image: url("../img/slider1.jpg");
 	background-repeat: no-repeat;
 	background-size: cover; 
@@ -2417,6 +2419,8 @@ a.sorting-active {
 	background-position: center;
 
 	border: none;
+
+	cursor: pointer;
 }
 .modal-added {
 	display: none;
